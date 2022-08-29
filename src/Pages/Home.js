@@ -1,9 +1,10 @@
 import React from 'react'
+import Trending from "../components/Trending"
 
-function Home() {
+const Home= () => {
   return (
-    <div className='bg-emerald-300'>
-      Crypto App React
+    <div className="">
+    <Trending/>
     </div>
   )
 }
