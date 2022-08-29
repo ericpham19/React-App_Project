@@ -2,7 +2,7 @@ import React from 'react'
 
 function Home() {
   return (
-    <div>
+    <div className='bg-emerald-300'>
       Crypto App React
     </div>
   )
