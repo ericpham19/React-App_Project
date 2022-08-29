@@ -1,31 +1,31 @@
-import axios from 'axios'
 import {useState, useEffect} from 'react'
-
+import axios from "axios";
 const UseAxios = (param) => {
-    const [response, setResponse] = useState(null);
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState("");
-    axios.defaults.baseURL = "https://api.coingecko.com/api/v3";
-    const fetchData = async (param) => {
-        try {
+    const [response, setResponse] = useState(null)
+    const [loading, setLoading] = useState(false)
+    const [error, setError] = useState('');
+    axios.defaults.baseURL= 'https://api.coingecko.com/api/v3'
+    
+    const fetchData= async (param) => {
+        try{
             setLoading(true)
-            const result = await axios(param);
+            const result= await axios(param)
             setResponse(result.data)
-        }
-         catch(error) {
-            setError(error);
+        } catch (err) {
+            setError(err);
+            
         } finally {
             setLoading(false);
         }
     }
+
     useEffect(() => {
-        fetchData(param);
+        fetchData(param)
     }, [])
 
-
-  return (
-    response , error, loading 
-  )
+  return {
+    response, loading, error
+  }
 }
 
-export default UseAxios
+export default UseAxios;
