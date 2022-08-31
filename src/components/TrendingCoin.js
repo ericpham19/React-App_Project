@@ -3,11 +3,11 @@ import React from 'react'
 const TrendingCoin = ({coin}) => {
     
   return (
-    <div className="font-light h-20 mr-2 mb-2 p-2 border-red-200 border-2 border-solid rounded hover:bg-blue-200">
-        <div className="flex items-center gap-2 absolute">
+    <div className="font-light  sm:grid-cols-3 h-20 mr-2 mb-2 p-2 border-red-200 border-2 border-solid rounded hover:bg-blue-200 ">
+        <div className="flex items-center gap-2 ">
           <span>{coin.score +1}</span>
           
-          <div className= "w-1/12">
+          <div className= "w-16">
           <img src={coin.large}></img>
           </div>
          
