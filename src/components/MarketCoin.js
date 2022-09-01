@@ -1,8 +1,9 @@
 import React from 'react'
 import { ArrowUp ,ArrowDown } from '../icons/Icons'
-
-const MarketCoin = ({name, image , symbol, price , pricechange, marketcap}) => {
+import {Link} from "react-router-dom";
+const MarketCoin = ({name, image , id, symbol, price , pricechange, marketcap}) => {
   return (
+    <Link to={`/coin/${id}`}>
     <div className="grid grid-cols-3 sm:grid-cols-4  p-2  mr-2 mb-2 p-2 border-red-200 border-2 border-solid rounded hover:bg-blue-200">
     <div className="flex items-center gap-1 w-full">
       <img className="w-6" src={image} alt={name} />
@@ -21,6 +22,7 @@ const MarketCoin = ({name, image , symbol, price , pricechange, marketcap}) => {
 
        
      </div>
+     </Link>
   )
 }
 

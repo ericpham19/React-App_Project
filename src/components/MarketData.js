@@ -7,7 +7,7 @@ const MarketData = () => {
   return (
     <div className="mt-8">
      <h1 className="text-2xl mb-2 text-center">Market Data</h1>
-     {response && response.map(coin => <MarketCoin key= {coin.id} name={coin.name} image={coin.image} symbol={coin.symbol} price= {coin.current_price} marketcap={coin.market_cap} pricechange= {coin.price_change_percentage_24h}/>)}
+     {response && response.map(coin => <MarketCoin key= {coin.id} id={coin.id} name={coin.name} image={coin.image} symbol={coin.symbol} price= {coin.current_price} marketcap={coin.market_cap} pricechange= {coin.price_change_percentage_24h}/>)}
     </div>
   )
 }
