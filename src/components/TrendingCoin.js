@@ -9,7 +9,7 @@ const TrendingCoin = ({coin , id}) => {
           <span>{coin.score +1}</span>
           
           <div className= "w-16">
-          <img src={coin.large}></img>
+          <img src={coin.large} alt={id}></img>
           </div>
          
           <p>{coin.name}</p>

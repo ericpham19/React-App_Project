@@ -1,9 +1,9 @@
 import React from 'react'
-
+import CoinDetails from '../components/CoinDetails'
 const Details = () => {
   return (
     <div>
-      Coins Details
+     <CoinDetails/>
     </div>
   )
 }
