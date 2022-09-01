@@ -1,4 +1,5 @@
 import React from 'react'
+import { ArrowUp ,ArrowDown } from '../icons/Icons'
 
 const MarketCoin = ({name, image , symbol, price , pricechange, marketcap}) => {
   return (
@@ -8,13 +9,13 @@ const MarketCoin = ({name, image , symbol, price , pricechange, marketcap}) => {
       <p>{name}</p>
       <span className="text-xs">({symbol})</span>
     </div> 
-    <span className="w-full text-center">${price}</span>
-        <span className={`flex gap-1 ${pricechange < 0 ? 'text-red-400' : 'text-green-400'}`}>
-        {pricechange}%
+    <span className="w-full text-center mt-4">${price.toLocaleString()}</span>
+        <span className={`flex gap-1 mt-4 ${pricechange < 0 ? 'text-red-400' : 'text-green-400'}`}>
+        {pricechange > 0 ? <ArrowUp /> : <ArrowDown/>}{pricechange}%
         </span>
         <div className='block'>
         <p>Market Cap</p>
-      <span>${marketcap}</span>
+      <span>${marketcap.toLocaleString()}</span>
         </div>
        
 
