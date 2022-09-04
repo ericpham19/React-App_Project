@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
 
-
-.positive-price-change{
-    color:darkgreen;
-};
-.negative-price-change{
-    color:red;
-};
+.x {
+    width: 40%;
+    float: left;
+  }

@@ -9,7 +9,7 @@ const UseAxios = (param) => {
     const fetchData= async (param) => {
         try{
             setLoading(true)
-            const result= await axios(param)
+            const result= await axios.get(param)
             setResponse(result.data)
         } catch (err) {
             setError(err);
@@ -23,8 +23,10 @@ const UseAxios = (param) => {
         fetchData(param)
     }, [])
 
+    
+
   return {
-    response, loading, error
+        response, loading, error
   }
 }
 

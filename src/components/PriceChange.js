@@ -6,7 +6,7 @@ const PriceChange = () => {
     const {id}= useParams()
     const {response} = UseAxios(`coins/${id}?localization=false&tickers=false&market_data=true&community_data=false&sparkline=false
     Server response`)
-    console.log(response)
+   
    
     if(!response){
         return <div>Loading</div>
