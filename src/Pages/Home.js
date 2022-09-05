@@ -22,13 +22,15 @@ const Home= () => {
       <button className="text-4xl border border-dashed border-8 border-red-200 hover:border-indigo-300 ">Trade</button>
       </Link>
       </div>
-      <Link to="/contact">
+   
       <div  className="text-center mt-10">
       <div className= "mb-2">
+      <Link to="/contact">
           <span className="text-3xl border border-dashed border-8 border-red-200 hover:border-indigo-300">Contact</span>
+          </Link>
         </div>
       </div>
-     </Link>
+     
 
 
       <div className="place-content-center text-center mt-20">
