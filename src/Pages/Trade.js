@@ -75,13 +75,19 @@ const Trade = () =>{
     setTrade({
       ...trade,
       gains:
-        (trade.sellData.market_data?.current_price.usd -
-          trade.buyData.market_data?.current_price.usd) *
+        ((trade.sellData.market_data?.current_price.usd -
+          trade.buyData.market_data?.current_price.usd).toFixed(2)) *
         volume,
     });
   };
+
+  const handleEnter= (event) => {
+    return event.which === 13 ? calcGains() : null
+  }
  
-   
+let today = new Date().toISOString().split('T')[0];
+
+  
 
   return (
     <div className="text-center justify-center  ">
@@ -107,10 +113,10 @@ const Trade = () =>{
           className="border-solid border-2"
         defaultValue={buy}
         type="date"
-        name="date"
-        
-          onChange={(result) => handleBuy(result)}
-          placeholder="Buy Date dd-mm-yyyy"
+        max= {today}
+       
+        onChange={(result) => handleBuy(result)}
+         placeholder="Buy Date dd-mm-yyyy"
         />
         <h2>
           {trade.buyData.market_data?.current_price.usd}
@@ -121,7 +127,7 @@ const Trade = () =>{
           className="border-solid border-2 "
          defaultValue={sell}
          type="date"
-         
+         max= {today}
           onChange={handleSell}
           placeholder="Sell Date dd-mm-yyyy"
         />

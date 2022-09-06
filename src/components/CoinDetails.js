@@ -1,11 +1,11 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+
 import UseAxios from '../hooks/Axios'
 import {NumberFunction} from '../NumberFunction'
 import LineDecoration from "../LineDecoration"
-const CoinDetails = () => {
+const CoinDetails = ({id}) => {
    
-    const {id}= useParams()
+    
     const {response} = UseAxios(`coins/${id}?localization=false&tickers=false&market_data=true&community_data=false&sparkline=false
     Server response`)
     
@@ -35,11 +35,11 @@ const CoinDetails = () => {
     <div className="grid-cols-4 flex gap-20 absolute mt-10">
         <div>
             <h1>Market Cap</h1>
-            <div className="flex-grow border-t border-gray-400"></div>
+            <div className="flex-grow border border-gray-400"></div>
             <h1>Market Cap Change 24H</h1>
-            <div className="flex-grow border-t border-gray-400"></div>
+            <div className="flex-grow border border-gray-400"></div>
             <h1>Fully Diluted Valuation</h1>
-            <div className="flex-grow border-t border-gray-400"></div>
+            <div className="flex-grow border border-gray-400"></div>
         </div>
         <div>
         <h1 className="font-medium">${NumberFunction(response.market_data.market_cap.usd)}</h1>
