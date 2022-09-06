@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useEffect, useState} from "react";
 import UseAxios from "../hooks/Axios";
 import { NumberFunction } from "../NumberFunction";
 
@@ -81,10 +81,14 @@ const Trade = () =>{
     });
   };
 
-  const handleEnter= (event) => {
-    return event.which === 13 ? calcGains() : null
-  }
  
+    const handleEnter = (event) => {
+      if(event.key === "Enter"){
+        event.preventDefault();
+        calcGains();
+      }
+    };
+   
 let today = new Date().toISOString().split('T')[0];
 
   
@@ -140,6 +144,7 @@ let today = new Date().toISOString().split('T')[0];
         
           className="border-solid border-2"
           value={volume}
+          onKeyDown= {handleEnter}
           placeholder="Enter Coin Amount"
           onChange={(event) => setVolume(event.target.value)}
         />
