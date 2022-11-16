@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/http//ericpham19.github.io/React-App_Project/static/css/main.8770ab30.css",
+    "main.js": "/http//ericpham19.github.io/React-App_Project/static/js/main.deb4ffbb.js",
+    "static/js/787.c88b20ac.chunk.js": "/http//ericpham19.github.io/React-App_Project/static/js/787.c88b20ac.chunk.js",
+    "index.html": "/http//ericpham19.github.io/React-App_Project/index.html",
+    "main.8770ab30.css.map": "/http//ericpham19.github.io/React-App_Project/static/css/main.8770ab30.css.map",
+    "main.deb4ffbb.js.map": "/http//ericpham19.github.io/React-App_Project/static/js/main.deb4ffbb.js.map",
+    "787.c88b20ac.chunk.js.map": "/http//ericpham19.github.io/React-App_Project/static/js/787.c88b20ac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8770ab30.css",
+    "static/js/main.deb4ffbb.js"
+  ]
+}
